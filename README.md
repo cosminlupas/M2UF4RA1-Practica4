@@ -10,7 +10,7 @@ SELECT Nom FROM Assignatura ORDER BY Nom;
    #### b) El mateix però sense tuples (registres) repetides
    SELECT DISTINCT Ciutat FROM A lumne WHERE Edat >= 18;
 ### 3) Extreure totes les dades de l'assignatura amb nom 'LABOSOFT'
-
+SELECT * FROM Assignatura WHERE Nom LIKE "LABOSOFT";
 ### 4) Obtenir els noms i l'edat dels alumnes que són de Lleida per ordre alfabètic (segons el camp nom).
 
 ### 5) Si fem la següent consulta ens dona error, perquè?
