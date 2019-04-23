@@ -14,3 +14,5 @@
 ### 8) Suposem ara que volem saber el nom, l’edat i l’any de naixement de cada alumne. Ordeneu la sortida per l'any de naixement en ordre decreixent.
 ### 9) Trobeu les assignatures que tenen com a mínim 20 alumnes menys que 'EDI'. Ordeneu el resultat alfabèticament per nom de l'assignatura
 ### 10) Suposem ara que inserim el següent alumne 
+#### (Observeu que el camp edat no s'omple, per tant tindrà valor nul):
+#### INSERT INTO Alumne (nom, ciutat) VALUES('Pere', 'Tremp');
