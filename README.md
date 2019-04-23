@@ -16,3 +16,4 @@
 ### 10) Suposem ara que inserim el següent alumne 
 #### (Observeu que el camp edat no s'omple, per tant tindrà valor nul):
 #### INSERT INTO Alumne (nom, ciutat) VALUES('Pere', 'Tremp');
+#### a) Trobar el nom dels alumnes que no tenen edat. Ordeneu el resultat pel camp nom.
