@@ -3,31 +3,41 @@
 ## 1 – Realitza les següents consultes
 
 ### 1) Obtenir el nom de totes les assignatures classificades per ordre alfabètic
-SELECT Nom  \n
+SELECT Nom  <br/>
 FROM Assignatura 
 ORDER BY Nom;
+
 ### 2) 
    #### a) Obtenir les ciutats dels alumnes majors de 18 anys
    SELECT Ciutat 
    FROM Alumne 
    WHERE Edat > 18;
+   
    #### b) El mateix però sense tuples (registres) repetides
    SELECT DISTINCT Ciutat 
    FROM A lumne 
    WHERE Edat >= 18;
+   
 ### 3) Extreure totes les dades de l'assignatura amb nom 'LABOSOFT'
 SELECT * 
 FROM Assignatura 
 WHERE Nom LIKE "LABOSOFT";
+
 ### 4) Obtenir els noms i l'edat dels alumnes que són de Lleida per ordre alfabètic (segons el camp nom).
 SELECT Nom, Edat 
 FROM Alumne 
 WHERE Ciutat LIKE Lleida 
 ORDER BY Nom
+
 ### 5) Si fem la següent consulta ens dona error, perquè?
    #### SELECT nom, numalumnes FROM assignatura ORDER BY 3;
-Perque el ORDER BY dona error perque 3 no es ningun nom de columna i no fa res    
+Perque el ORDER BY dona error perque 3 no es ningun nom de columna i no fa res  
+
 ### 6) Obtenir el llistat de tots els alumnes majors d’edat (igual o major que de 18 anys), classificant-los per la ciutat d'origen en ordre creixent i per la seva edat en ordre decreixent dins dels de la mateixa ciutat.
+SELECT * 
+FROM Alumne 
+WHERE edat >= 18 
+ORDER BY  Ciutat ASC, edat DESC;
 
 ### 7) El mateix però volem que enlloc de nom, ens surti IDENTITAT, i enlloc de ciutat que ens surti ORIGEN.
 
