@@ -37,27 +37,36 @@ Perque el ORDER BY dona error perque 3 no es ningun nom de columna i no fa res  
 SELECT * <br/>
 FROM Alumne <br/>
 WHERE edat >= 18 <br/>
-ORDER BY  Ciutat ASC, edat DESC;<br/>
+ORDER BY  Ciutat ASC, edat DESC; <br/>
 
 ### 7) El mateix però volem que enlloc de nom, ens surti IDENTITAT, i enlloc de ciutat que ens surti ORIGEN.
 SELECT Nom AS Identitat, Ciutat AS Origen <br/>
 FROM Alumne <br/>
 WHERE Edat >= 18 <br/>
-ORDER BY Ciutat ASC, Edat Desc <br/>
+ORDER BY Ciutat ASC, Edat Desc; <br/>
 
 ### 8) Suposem ara que volem saber el nom, l’edat i l’any de naixement de cada alumne. Ordeneu la sortida per l'any de naixement en ordre decreixent.
 SELECT Nom, Edat, (EXTRACT(YEAR FROM CURRENT_DATE)-Edat) AS Any_Naixement <br/>
 FROM Alumne <br/>
-ORDER BY AnyNaixement Desc <br/>
+ORDER BY AnyNaixement Desc; <br/>
 
 ### 9) Trobeu les assignatures que tenen com a mínim 20 alumnes menys que 'EDI'. Ordeneu el resultat alfabèticament per nom de l'assignatura
 SELECT * <br/> 
 FROM Assignatura <br/>
 WHERE (SELECT NumAlumnes FROM Assignatura WHERE Nom LIKE 'EDI')-20<NumAlumnes <br/>
-ORDER BY Nom <br/>
+ORDER BY Nom; <br/>
 
 ### 10) Suposem ara que inserim el següent alumne 
 #### (Observeu que el camp edat no s'omple, per tant tindrà valor nul):
 #### INSERT INTO Alumne (nom, ciutat) VALUES('Pere', 'Tremp');
 #### a) Trobar el nom dels alumnes que no tenen edat. Ordeneu el resultat pel camp nom.
+SELECT Nom <br/>
+FROM Alumne <br/> 
+WHERE Edat IS NULL  <br/>
+ORDER BY Nom; <br/>
+
 #### b) Trobeu ara els noms dels alumnes que si que tenen edat
+SELECT Nom <br/>
+FROM Alumne <br/>
+WHERE Edat IS NOT NULL <br/>
+ORDER BY Nom; <br/>
