@@ -3,16 +3,27 @@
 ## 1 – Realitza les següents consultes
 
 ### 1) Obtenir el nom de totes les assignatures classificades per ordre alfabètic
-SELECT Nom FROM Assignatura ORDER BY Nom;
+SELECT Nom 
+FROM Assignatura 
+ORDER BY Nom;
 ### 2) 
    #### a) Obtenir les ciutats dels alumnes majors de 18 anys
-   SELECT Ciutat FROM Alumne WHERE Edat > 18;
+   SELECT Ciutat 
+   FROM Alumne 
+   WHERE Edat > 18;
    #### b) El mateix però sense tuples (registres) repetides
-   SELECT DISTINCT Ciutat FROM A lumne WHERE Edat >= 18;
+   SELECT DISTINCT Ciutat 
+   FROM A lumne 
+   WHERE Edat >= 18;
 ### 3) Extreure totes les dades de l'assignatura amb nom 'LABOSOFT'
-SELECT * FROM Assignatura WHERE Nom LIKE "LABOSOFT";
+SELECT * 
+FROM Assignatura 
+WHERE Nom LIKE "LABOSOFT";
 ### 4) Obtenir els noms i l'edat dels alumnes que són de Lleida per ordre alfabètic (segons el camp nom).
-
+SELECT Nom, Edat 
+FROM Alumne 
+WHERE Ciutat LIKE Lleida 
+ORDER BY Nom
 ### 5) Si fem la següent consulta ens dona error, perquè?
    #### SELECT nom, numalumnes FROM assignatura ORDER BY 3;
    
