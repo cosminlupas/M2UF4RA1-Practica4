@@ -44,11 +44,17 @@ SELECT Nom AS Identitat, Ciutat AS Origen <br/>
 FROM Alumne <br/>
 WHERE Edat >= 18 <br/>
 ORDER BY Ciutat ASC, Edat Desc <br/>
+
 ### 8) Suposem ara que volem saber el nom, l’edat i l’any de naixement de cada alumne. Ordeneu la sortida per l'any de naixement en ordre decreixent.
 SELECT Nom, Edat, (EXTRACT(YEAR FROM CURRENT_DATE)-Edat) AS Any_Naixement <br/>
 FROM Alumne <br/>
 ORDER BY AnyNaixement Desc <br/>
+
 ### 9) Trobeu les assignatures que tenen com a mínim 20 alumnes menys que 'EDI'. Ordeneu el resultat alfabèticament per nom de l'assignatura
+SELECT * <br/> 
+FROM Assignatura <br/>
+WHERE (SELECT NumAlumnes FROM Assignatura WHERE Nom LIKE 'EDI')-20<NumAlumnes <br/>
+ORDER BY Nom <br/>
 
 ### 10) Suposem ara que inserim el següent alumne 
 #### (Observeu que el camp edat no s'omple, per tant tindrà valor nul):
