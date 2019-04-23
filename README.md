@@ -3,7 +3,7 @@
 ## 1 – Realitza les següents consultes
 
 ### 1) Obtenir el nom de totes les assignatures classificades per ordre alfabètic
-SELECT Nom 
+SELECT Nom  \n
 FROM Assignatura 
 ORDER BY Nom;
 ### 2) 
@@ -26,7 +26,7 @@ WHERE Ciutat LIKE Lleida
 ORDER BY Nom
 ### 5) Si fem la següent consulta ens dona error, perquè?
    #### SELECT nom, numalumnes FROM assignatura ORDER BY 3;
-   
+Perque el ORDER BY dona error perque 3 no es ningun nom de columna i no fa res    
 ### 6) Obtenir el llistat de tots els alumnes majors d’edat (igual o major que de 18 anys), classificant-los per la ciutat d'origen en ordre creixent i per la seva edat en ordre decreixent dins dels de la mateixa ciutat.
 
 ### 7) El mateix però volem que enlloc de nom, ens surti IDENTITAT, i enlloc de ciutat que ens surti ORIGEN.
